@@ -1,0 +1,427 @@
+/* Pengaturan dasar website */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tampilan halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("background.jpg");
+    background-color: #fafbfd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #28323f;
+    padding: 40px 20px;
+}
+
+/* Judul utama */
+h1 {
+    color: #2563eb;
+    margin-bottom: 12px;
+    font-size: 32px;
+}
+
+/* Teks deskripsi */
+p {
+    color: #0a0a0a;
+    font-size: 16px;
+}
+
+/* Navbar DanzStore */
+header {
+    
+    
+    background-color: rgba(255, 255, 255, 0.96);
+    padding: 20px 40px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 15px rgb(33, 27, 27);
+    position: sticky;
+    top: 10px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav h2 {
+    color: #0364ff;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fdfeff;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #fcfdfe;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    padding: 70px 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hero h1 {
+    color: rgb(251, 244, 244);
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #fffdfd;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: white;
+    color: #2563eb;
+    padding: 14px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background-color: #0d0d8b;
+}
+
+/* Katalog Produk */
+.products {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 30px;
+    color: #f3f4f6;
+    margin-bottom: 12px;
+}
+
+.products-description {
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgb(26, 20, 20);
+    transition: transform 0.2s ease;
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.product-card h3 {
+    color: #2563eb;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.product-card p {
+    line-height: 1.6;
+}
+
+/* Tombol Pilih Layanan */
+.product-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* Tampilan untuk layar HP */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    header {
+        padding: 18px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 5px;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 6px 4px;
+    font-size: 14px;
+}
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .contact {
+        padding: 30px 18px;
+    }
+
+    .contact-button {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 20px 12px;
+        margin-top: 25px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+    }
+
+/* Bagian Kontak */
+.contact {
+    margin-top: 50px;
+    padding: 40px 25px;
+    text-align: center;
+    background-color: rgba(225, 225, 225, 0.92);
+    border-radius: 20px;
+    border: 1px solid rgba(225, 225, 225, 0.32)
+}
+
+.contact h2 {
+    color: #1f2937;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #303339;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 14px 24px;
+    background-color: #16a34a;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #15803d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(22, 163, 74, 0.3);
+}
+
+/* Footer DanzStore */
+.footer {
+    margin-top: 35px;
+    padding: 25px 15px;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(15, 23, 42, 0.85);
+    border-radius: 15px;
+}
+
+.footer p {
+    color: #e2e8f0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Navigasi scroll halus */
+html {
+    scroll-behavior: smooth;
+}
+
+.product-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.product-card li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.product-card li:last-child {
+    border-bottom: none;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    margin-top: 12px;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+/* Animasi saat website dibuka */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.products {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Tombol kembali ke atas */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+/* Efek scroll halus */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Efek footer */
+.footer {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.footer:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
+}
